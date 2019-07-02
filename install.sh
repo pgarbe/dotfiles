@@ -12,6 +12,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Bunch of symlinks
 
 ln -sfv "$DOTFILES_DIR/.bash_profile" ~
+ln -sfv "$DOTFILES_DIR/.aliases" ~
 # ln -sfv "$DOTFILES_DIR/.inputrc" ~
 # ln -sfv "$DOTFILES_DIR/.gemrc" ~
 ln -sfv "$DOTFILES_DIR/.gitconfig" ~

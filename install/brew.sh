@@ -8,6 +8,7 @@ brew upgrade
 
 apps=(
   bash-completion2
+  diff-so-fancy
 #   bats
 #   battery
 #   coreutils
@@ -18,6 +19,7 @@ apps=(
   git
   git-extras
   git-secrets
+  hub
 #   gnu-sed --with-default-names
   # gnupg2
 #   grep --with-default-names
