@@ -11,7 +11,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Bunch of symlinks
 
-# ln -sfv "$DOTFILES_DIR/.bash_profile" ~
+ln -sfv "$DOTFILES_DIR/.bash_profile" ~
 # ln -sfv "$DOTFILES_DIR/.inputrc" ~
 # ln -sfv "$DOTFILES_DIR/.gemrc" ~
 ln -sfv "$DOTFILES_DIR/.gitconfig" ~
@@ -20,8 +20,4 @@ ln -sfv "$DOTFILES_DIR/.gitignore" ~
 ln -sfv "$DOTFILES_DIR/vscode/settings.json" ~/Library/Application\ Support/Code/User/
 
 # Package managers & packages
-
-. "$DOTFILES_DIR/brew.sh"
-# . "$DOTFILES_DIR/bash.sh"
-# . "$DOTFILES_DIR/npm.sh"
-# . "$DOTFILES_DIR/pip.sh"
+. "$DOTFILES_DIR/install/brew.sh"

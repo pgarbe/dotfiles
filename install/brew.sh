@@ -8,7 +8,6 @@ brew upgrade
 
 apps=(
   bash-completion2
-  
 #   bats
 #   battery
 #   coreutils
@@ -20,13 +19,14 @@ apps=(
   git-extras
   git-secrets
 #   gnu-sed --with-default-names
-#   gnupg2
+  # gnupg2
 #   grep --with-default-names
 #   hub
 #   httpie
   jq
 #   peco
 #   psgrep
+  thefuck
   tree
   wget
 )
