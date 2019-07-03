@@ -20,5 +20,10 @@ ln -sfv "$DOTFILES_DIR/.gitignore" ~
 
 ln -sfv "$DOTFILES_DIR/vscode/settings.json" ~/Library/Application\ Support/Code/User/
 
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 # Package managers & packages
 . "$DOTFILES_DIR/install/brew.sh"

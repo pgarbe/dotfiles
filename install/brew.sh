@@ -38,6 +38,7 @@ brew install "${apps[@]}"
 caskapps=(
   alfred
   dropbox
+  docker
   firefox
   slack
   sourcetree
