@@ -23,7 +23,7 @@ apps=(
 #   gnu-sed --with-default-names
   # gnupg2
 #   grep --with-default-names
-#   hub
+  hub
 #   httpie
   jq
 #   peco
@@ -39,11 +39,13 @@ caskapps=(
   alfred
   dropbox
   docker
+  evernote
   firefox
   slack
   sourcetree
   spectacle
   visual-studio-code
+  zoom
 )
 
 brew cask install "${caskapps[@]}"

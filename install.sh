@@ -13,6 +13,9 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ln -sfv "$DOTFILES_DIR/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/.aliases" ~
+ln -sfv "$DOTFILES_DIR/.exports" ~
+ln -sfv "$DOTFILES_DIR/.functions" ~
+ln -sfv "$DOTFILES_DIR/.path" ~
 # ln -sfv "$DOTFILES_DIR/.inputrc" ~
 # ln -sfv "$DOTFILES_DIR/.gemrc" ~
 ln -sfv "$DOTFILES_DIR/.gitconfig" ~
@@ -27,3 +30,4 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Package managers & packages
 . "$DOTFILES_DIR/install/brew.sh"
+. "$DOTFILES_DIR/install/gem.sh"

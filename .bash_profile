@@ -1,10 +1,37 @@
 # Load our dotfiles like ~/.bash_prompt, etc…
 #   ~/.extra can be used for settings you don’t want to commit,
 #   Use it to configure your PATH, thus it being first in line.
-for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
-    [ -r "$file" ] && source "$file" && echo "$file"
+for file in ~/.{extra,bash_prompt,exports,aliases,functions,path}; do
+    [ -r "$file" ] && source "$file"
 done
 unset file
+
+# source: https://github.com/Bash-it/bash-it/tree/master/completion/available
+# Add tab completion for many Bash commands
+if [ -f /sw/etc/bash_completion ]; then
+   . /sw/etc/bash_completion
+fi
+
+# Completion: AWS
+[[ -x "$(which aws_completer)" ]] && complete -C "$(which aws_completer)" aws
+
+
+# Add completion for Makefile
+# see http://stackoverflow.com/a/38415982/1472048
+complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_-]*$//'\`" make
+
+# Brew completion
+if which brew >/dev/null 2>&1; then
+  BREW_PREFIX=$(brew --prefix)
+
+  if [ -f "$BREW_PREFIX"/etc/bash_completion.d/brew ]; then
+    . "$BREW_PREFIX"/etc/bash_completion.d/brew
+  fi
+
+  if [ -f "$BREW_PREFIX"/Library/Contributions/brew_bash_completion.sh ]; then
+    . "$BREW_PREFIX"/Library/Contributions/brew_bash_completion.sh
+  fi
+fi
 
 # # generic colouriser
 # GRC=`which grc`
@@ -73,7 +100,7 @@ unset file
 # #     return 1 2> /dev/null || exit 1;
 # # fi;
 
-# # Sorry, very MacOS centric here. :/
+# Sorry, very MacOS centric here. :/
 # if  which brew > /dev/null; then
 
 #     # bash completion.
@@ -93,7 +120,7 @@ unset file
 # fi;
 
 
-# # Enable tab completion for `g` by marking it as an alias for `git`
+# Enable tab completion for `g` by marking it as an alias for `git`
 # if type __git_complete &> /dev/null; then
 #     __git_complete g __git_main
 # fi;
@@ -103,18 +130,18 @@ unset file
 # complete -W "NSGlobalDomain" defaults
 
 
-# ##
-# ## better `cd`'ing
-# ##
+##
+## better `cd`'ing
+##
 
-# # Case-insensitive globbing (used in pathname expansion)
-# shopt -s nocaseglob;
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob;
 
-# # Correct spelling errors in arguments supplied to cd
-# shopt -s cdspell;
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell;
 
-# # Autocorrect on directory names to match a glob.
-# shopt -s dirspell 2> /dev/null
+# Autocorrect on directory names to match a glob.
+shopt -s dirspell 2> /dev/null
 
-# # Turn on recursive globbing (enables ** to recurse all directories)
-# shopt -s globstar 2> /dev/null
+# Turn on recursive globbing (enables ** to recurse all directories)
+shopt -s globstar 2> /dev/null

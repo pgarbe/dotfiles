@@ -1,4 +1,6 @@
 {
     "window.zoomLevel": 0,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "sync.gist": "bbc1391f322e1766fc19553b28698ecc",
+    "editor.tabSize": 2
 }
