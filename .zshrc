@@ -18,7 +18,10 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws git)
+plugins=(aws git jira osx)
+
+JIRA_URL=https://collaboration.msi.audi.com/jira/
+JIRA_NAME=philipp.garbe@rio.cloud
 
 source $ZSH/oh-my-zsh.sh
 
