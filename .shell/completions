@@ -1,0 +1,2 @@
+# AWS
+source /usr/local/aws/bin/aws_zsh_completer.sh

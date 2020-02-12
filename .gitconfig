@@ -1,13 +1,16 @@
 [user]
   name = Philipp Garbe
-  email = philipp.garbe@web.de
+  email = philipp.garbe@rio.cloud
   signingkey = 85E92C00
+
+# [includeIf "gitdir:~/sources/rio/"]
+#   path = ~.gitconfig.work
 
 [github]
   user = pgarbe
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/philipp/.gitignore
   editor = code --wait
   filemode = false
   trustctime = false
@@ -102,7 +105,7 @@
   defaultToUpstream = true
 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
 # [init]

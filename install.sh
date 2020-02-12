@@ -10,14 +10,15 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
 # Bunch of symlinks
-
+ln -sfv "$DOTFILES_DIR/.zshrc" ~
 ln -sfv "$DOTFILES_DIR/.bash_profile" ~
-ln -sfv "$DOTFILES_DIR/.aliases" ~
-ln -sfv "$DOTFILES_DIR/.exports" ~
-ln -sfv "$DOTFILES_DIR/.functions" ~
-ln -sfv "$DOTFILES_DIR/.path" ~
-# ln -sfv "$DOTFILES_DIR/.inputrc" ~
-# ln -sfv "$DOTFILES_DIR/.gemrc" ~
+ln -sfv "$DOTFILES_DIR/.hushlogin" ~
+
+# ln -sfv "$DOTFILES_DIR/.shell/aliases" ~
+# ln -sfv "$DOTFILES_DIR/.shell/functions" ~
+# ln -sfv "$DOTFILES_DIR/.shell/path" ~
+# ln -sfv "$DOTFILES_DIR/.shell/variables" ~
+
 ln -sfv "$DOTFILES_DIR/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/.gitignore" ~
 
@@ -30,4 +31,4 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Package managers & packages
 . "$DOTFILES_DIR/install/brew.sh"
-. "$DOTFILES_DIR/install/gem.sh"
+. "$DOTFILES_DIR/install/others.sh"

@@ -7,42 +7,33 @@ brew upgrade
 # Install packages
 
 apps=(
-  bash-completion2
+  cfn-lint
   diff-so-fancy
-#   bats
-#   battery
-#   coreutils
-#   dockutil
-#   ffmpeg
-#   fasd
-#   gifsicle
   git
   git-extras
   git-secrets
   hub
-#   gnu-sed --with-default-names
-  # gnupg2
-#   grep --with-default-names
   hub
-#   httpie
   jq
-#   peco
-#   psgrep
   thefuck
   tree
   wget
+  zsh
+  zsh-completions
 )
 
 brew install "${apps[@]}"
 
 caskapps=(
   alfred
+  amazon-chime
   dropbox
   docker
   evernote
   firefox
   slack
   sourcetree
+  skype-for-business
   spectacle
   visual-studio-code
   zoom
