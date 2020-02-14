@@ -29,11 +29,9 @@ caskapps=(
   amazon-chime
   dropbox
   docker
-  evernote
   firefox
   slack
   sourcetree
-  skype-for-business
   spectacle
   visual-studio-code
   zoom

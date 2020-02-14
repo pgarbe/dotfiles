@@ -1,2 +1,4 @@
-# AWS
-source /usr/local/aws/bin/aws_zsh_completer.sh
+# AWS (Workaround as v2 doesn't support zsh natively)
+autoload bashcompinit
+bashcompinit
+complete -C '/usr/local/bin/aws_completer' aws
