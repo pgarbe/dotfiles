@@ -1,7 +1,7 @@
 [user]
-  name = Philipp Garbe
-  email = philipp.garbe@rio.cloud
-  signingkey = 85E92C00
+	name = Philipp Garbe
+	email = philipp.garbe@rio.cloud
+	signingkey = 6567146B2EE900906054E628CBAA3AD4CB671C0B
 
 # [includeIf "gitdir:~/sources/rio/"]
 #   path = ~.gitconfig.work
@@ -88,9 +88,6 @@
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
-[fetch]
-  prune = true
-
 [diff]
   renames = copies
   tool = sourcetree
@@ -112,7 +109,20 @@
 # 	templateDir = ~/.gitsecrets/hooks
 
 [commit]
-	gpgsign = false
+	gpgsign = true
+	template = /Users/philipp/.stCommitMsg
 
 [gpg]
-  program = gpg2
+	program = /usr/local/bin/gpg
+[pull]
+  rebase = merges
+[fetch]
+  prune = true
+[rebase]
+  autostash = true
+
+[init]
+	defaultBranch = main
+[tag]
+	forceSignAnnotated = true
+	gpgSign = true

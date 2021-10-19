@@ -7,15 +7,16 @@ brew upgrade
 # Install packages
 
 apps=(
-  cfn-lint
+  awscli
   diff-so-fancy
+  dive
   git
   git-extras
   git-secrets
-  hub
+  gnupg
   hub
   jq
-  thefuck
+  pinentry
   tree
   wget
   zsh
@@ -30,9 +31,10 @@ caskapps=(
   dropbox
   docker
   firefox
+  google-chrome
   slack
   sourcetree
-  spectacle
+  rectangle
   visual-studio-code
   zoom
 )
