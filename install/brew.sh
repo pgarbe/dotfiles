@@ -8,6 +8,7 @@ brew upgrade
 
 apps=(
   awscli
+  cask
   diff-so-fancy
   dive
   git
@@ -39,4 +40,4 @@ caskapps=(
   zoom
 )
 
-brew cask install "${caskapps[@]}"
+brew install --cask "${caskapps[@]}"
