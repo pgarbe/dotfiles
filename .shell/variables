@@ -10,3 +10,6 @@ export HISTCONTROL='ignoreboth';
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
+
+# AWS CLI
+AWS_CLI_AUTO_PROMPT=on-partial

@@ -15,11 +15,14 @@ apps=(
   git-extras
   git-secrets
   gnupg
+  gpg2
   hub
   jq
   pinentry
+  pinentry-mac
   tree
   wget
+  ykman
   zsh
   zsh-completions
 )
@@ -31,13 +34,14 @@ caskapps=(
   amazon-chime
   dropbox
   docker
-  firefox
-  google-chrome
-  slack
+  iterm2
+#  firefox
+#  google-chrome
+#  slack
   sourcetree
   rectangle
   visual-studio-code
-  zoom
+#  zoom
 )
 
 brew install --cask "${caskapps[@]}"

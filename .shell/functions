@@ -32,10 +32,6 @@ ips () {
 }
 
 
-aws-azure-login() {
-  docker run --rm -it -v ~/.aws:/root/.aws riothelogisticsflow/aws-azure-login "$@" --profile rioiam
-}
-
 update_git_dirs() {
     # so what the below does is finds all files named .git in my home
     # directory, but excludes the .virtualenvs folder then strips the .git from

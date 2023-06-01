@@ -1,7 +1,7 @@
 [user]
 	name = Philipp Garbe
-	email = philipp.garbe@rio.cloud
-	signingkey = 6567146B2EE900906054E628CBAA3AD4CB671C0B
+	email = git@garbe.io
+	signingkey = 9956EE7CAABE87412F759144CEA8024167182F96
 
 # [includeIf "gitdir:~/sources/rio/"]
 #   path = ~.gitconfig.work
@@ -10,7 +10,7 @@
   user = pgarbe
 
 [core]
-	excludesfile = /Users/philipp/.gitignore
+	excludesfile = /Users/philipp.garbe/.gitignore_global
   editor = code --wait
   filemode = false
   trustctime = false
@@ -67,7 +67,8 @@
   newHighlight = "green bold 22"
 
 [credential]
-  helper = osxkeychain
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
 
 [grep]
   lineNumber = true
@@ -87,6 +88,7 @@
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+	autoSetupRemote = true
 
 [diff]
   renames = copies
@@ -110,7 +112,6 @@
 
 [commit]
 	gpgsign = true
-	template = /Users/philipp/.stCommitMsg
 
 [gpg]
 	program = /usr/local/bin/gpg
